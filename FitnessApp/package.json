@@ -1,6 +1,8 @@
 {
-  "name": "wmc-fitnessapp-projekt_lee_bondok_jovicic_kahric",
+  "slug": "FitnessApp",
+  "name": "FitnessApp",
   "main": "expo-router/entry",
+  "scheme": "FitnessApp", 
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
