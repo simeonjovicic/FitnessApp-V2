@@ -23,12 +23,39 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+        <Tabs.Screen
+        name="progress"
         options={{
-          title: 'Explore',
+          title: 'Progress',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'analytics' : 'analytics-outline'} color={color} />
+          ),
+        }}
+      />
+        <Tabs.Screen
+        name="add"
+        options={{
+          title: 'Add',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'add-circle' : 'add-circle-sharp'} color={color} />
+          ),
+        }}
+      />
+        <Tabs.Screen
+        name="calendar"
+        options={{
+          title: 'Calendar',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'calendar' : 'calendar-outline'} color={color} />
+          ),
+        }}
+      />
+        <Tabs.Screen
+        name="account"
+        options={{
+          title: 'Account',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'body' : 'body-outline'} color={color} />
           ),
         }}
       />
