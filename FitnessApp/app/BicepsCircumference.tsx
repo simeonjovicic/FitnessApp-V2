@@ -9,19 +9,15 @@ export default function BicepsCircumference() {
       alignItems: 'center',
       justifyContent: 'center',
       color: 'white',
-      backgroundColor: 'purple',
+      backgroundColor: 'black',
     },
   });
   
   return (
     <View style={styles.container}>
       <Text>This is the Biceps Circumference screen</Text>
-      <Button title="du kleiner ayri" />
-      <Button title="du kleiner ayri" />
-      <Button title="du kleiner ayri" />
-      <Button title="du kleiner ayri" />
-      <Button title="du kleiner ayri" />
-      <Button title="du kleiner ayri" />
+      <Text>This is the Biceps Circumference screen</Text>
+      <Text>This is the Biceps Circumference screen</Text>
     </View>
   );
 }
