@@ -164,7 +164,7 @@ export default function AccountScreen() {
       {/* Biceps Circumference Section */}
       <View style={styles.pickerContainer}>
         <TouchableOpacity 
-          onPress={() => router.push('/BicepsCircumference')} 
+          onPress={() => router.push('/WeightDetail')} 
           style={styles.heightButton} // Reuse the same style for consistency
         >
           <Image
