@@ -7,8 +7,11 @@ import {
   searchImg,
   userImg,
 } from "../utils";
+import { useNavigate } from "react-router-dom";
 
 const Bottom = () => {
+  const navigate = useNavigate(); // ✅ Call useNavigate here
+
   return (
     <footer
       className="w-full my-8 fixed bottom-0 bg-black/90 backdrop-blur-sm 
@@ -25,6 +28,7 @@ const Bottom = () => {
 
         {/* Central prominent icon */}
         <button
+          onClick={() => navigate("/create-workout")} // ✅ Correct usage of navigate
           className="p-3 bg-gray-900 hover:bg-gray-800 rounded-full 
           shadow-lg -translate-y-2"
         >

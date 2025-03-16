@@ -1,9 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import App from "./App";
+import AddExercisePage from "./pages/AddExercisePage";
+import CreateWorkoutPage from "./pages/CreateWorkoutPage";
+import CreateTemplatePage from "./pages/CreateTemplatePage";
+import "./index.css";
 
-//...
+// Sentry Configuration
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
@@ -19,14 +23,21 @@ Sentry.init({
       blockAllMedia: false,
     }),
   ],
-  tracesSampleRate: 1.0, 
+  tracesSampleRate: 1.0,
   tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0, 
 });
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Router>
+      <Routes>
+        <Route path="/" element={<App/>}/>
+        <Route path="/create-workout" element={<CreateWorkoutPage />} />
+        <Route path="/create-template" element={<CreateTemplatePage />} />
+        <Route path="/add-exercise" element={<AddExercisePage />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
+);
